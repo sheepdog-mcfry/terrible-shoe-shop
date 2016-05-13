@@ -1,0 +1,20 @@
+{
+    "orderId": "2015-03-03-1025",
+    "purchaseDescription": "Gunnar Inge's Shoe",
+    "amount": "NOK 1337.00",
+    "vatRate": "0.00",
+    "successRedirect": "http://example.com/success",
+    "cancelRedirect": "http://example.com/cancel",
+    "merchantName": "telenordigital-capturewebshop-web",
+    "connectId": "5847295218340073472",
+    "allowedPaymentMethods": [ "DOB", "CREDIT_CARD" ],
+    "products": [
+      {
+        "name": "Gunnar Inge's Shoe",
+        "price": "NOK 1337.00",
+        "vatRate": "0.10",
+        "sku": "CMO-STO-100-M",
+        "timeSpec": "P1M"
+      }
+    ]
+}

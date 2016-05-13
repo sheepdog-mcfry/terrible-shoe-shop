@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Terrible Shoe Shop</title>
+    </head>
+    <body>
+        <p>Here is where you pay for the issue</p>
+        <form method="post" action="https://staging.payment.telenordigital.com/transactions">
+            <textarea name="hide" style="display:none;">
+                {
+                    "orderId": "2015-03-03-1025",
+                    "purchaseDescription": "Gunnar Inge's Shoe",
+                    "amount": "NOK 1337.00",
+                    "vatRate": "0.00",
+                    "successRedirect": "http://example.com/success",
+                    "cancelRedirect": "http://example.com/cancel",
+                    "merchantName": "telenordigital-capturewebshop-web",
+                    "products": [
+                      {
+                        "name": "Gunnar Inge's Shoe",
+                        "price": "NOK 1337.00",
+                        "vatRate": "0.10",
+                        "sku": "CMO-STO-100-M",
+                        "timeSpec": "P1M"
+                      }
+                    ]
+                }
+            </textarea>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

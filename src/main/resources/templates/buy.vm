@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <title>Terrible Shoe Shop</title>
+    </head>
+    <body>
+        <script>
+            function payment() {
+                 $.ajax({
+                    url: "https://staging.payment.telenordigital.com/transactions",
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("Authorization", "Basic " + btoa("gatling1:T5Wo2Ghd5E6av3WTk1LO"));
+                    },
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    processData: true,
+                    data:
+                    {
+                        "orderId": "2015-03-03-1025",
+                        "purchaseDescription": "Gunnar Inges Shoe",
+                        "amount": "NOK 1337.00",
+                        "vatRate": "0.00",
+                        "successRedirect": "localhost:4567/success",
+                        "cancelRedirect": "localhost:4567/fail",
+                        "merchantName": "telenordigital-capturewebshop-web",
+                        "products": [
+                            {
+                                "name": "Gunnar Inges Shoe",
+                                "price": "NOK 1337.00",
+                                "vatRate": "0.10",
+                                "sku": "CMO-STO-100-M",
+                                "timeSpec": "P1M"
+                            }
+                        ]
+                    },
+                    success: function (thingyBack) {
+                        console.log(JSON.stringify(thingyBack));
+                    },
+                    error: function(){
+                        alert("Cannot get data");
+                    }
+                })
+            };
+        </script>
+        <p>Here is where you pay for the issue</p>
+        <button onclick="payment()">Submit</button>
+    </body>
+</html>

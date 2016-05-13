@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terrible Shoe Shop</title>
+</head>
+<body>
+<p>Well done, you bought a terrible shoe. We hope you feel bad.</p>
+<form method="get" action="/index">
+    <button>Let's go home</button>
+</form>
+</body>
+</html>
