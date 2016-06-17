@@ -10,7 +10,7 @@
                  $.ajax({
                     url: "https://staging.payment.telenordigital.com/transactions",
                     beforeSend: function(xhr) {
-                        xhr.setRequestHeader("Authorization", "Basic " + btoa("gatling1:T5Wo2Ghd5E6av3WTk1LO"));
+                        xhr.setRequestHeader("Authorization", "Basic dGVsZW5vcmRpZ2l0YWwtY2FwdHVyZXdlYnNob3Atd2ViOkRtQ1diRTNY");
                     },
                     type: 'POST',
                     dataType: 'json',
@@ -35,7 +35,7 @@
                             }
                         ]
                     },
-                    success: function (thingyBack) {
+                    success: function(thingyBack) {
                         console.log(JSON.stringify(thingyBack));
                     },
                     error: function(){
@@ -46,5 +46,8 @@
         </script>
         <p>Here is where you pay for the issue</p>
         <button onclick="payment()">Submit</button>
+        <form action="/logout" method="get">
+           <button>I didn't really want the shoe</button>
+        </form>
     </body>
 </html>
